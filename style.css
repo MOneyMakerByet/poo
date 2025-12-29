@@ -1,0 +1,151 @@
+:root {
+  --primary: #005eff;
+  --dark: #0c1a2b;
+  --light: #f8f9fa;
+  --gray: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  background: var(--dark);
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: var(--gray);
+}
+
+.features {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.feature-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--light);
+  padding: 30px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.testimonials {
+  background: var(--dark);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.carousel {
+  margin-top: 40px;
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer .socials a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
